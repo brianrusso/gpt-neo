@@ -4,7 +4,7 @@ from collections import defaultdict
 
 DATASETS = {}
 
-for path in Path("/content/gpt-neo/configs/dataset_configs").glob("*.json"):
+for path in Path("gpt-neo/configs/dataset_configs").glob("*.json"):
     dataset_id = path.stem
     DATASETS[dataset_id] = json.loads(path.read_text())
 
